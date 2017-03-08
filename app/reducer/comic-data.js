@@ -1,4 +1,4 @@
-export default function comicsData(state = [], action) {
+export default function comicData(state = [], action) {
   switch (action.type) {
     case 'COMICS@FIND_ALL_COMPLETE':
       return action.data;
