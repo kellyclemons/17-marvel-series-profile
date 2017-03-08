@@ -1,0 +1,26 @@
+// NAVBAR
+
+.navbar {
+  background: $c-app-blue;
+
+  &__heading {
+    margin: 0;
+    padding: .5rem 0;
+    color: $c-white;
+    font-family: 'Special Elite', cursive;
+  }
+}
+
+.section {
+  padding: 1rem;
+}
+
+.container {
+  max-width: 50rem;
+  margin: auto;
+}
+
+.main {
+  display: flex;
+  margin: 1rem;
+}

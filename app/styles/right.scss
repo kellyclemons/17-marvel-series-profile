@@ -1,0 +1,57 @@
+// RIGHT SIDE
+
+.right {
+  padding-left: 1rem;
+}
+
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+
+.characters-list__item {
+  flex-basis: calc(100% / 4 - 1rem - 1rem);
+  flex-grow: 1;
+  margin: 1rem;
+  font-size: 0.8rem;
+}
+
+.characters-heading {
+  margin: 0;
+  padding-left: 2rem;
+  border-bottom: 1px solid $c-black;
+  font-family: 'Special Elite', cursive;
+}
+
+
+// left
+//
+
+
+
+.grid2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+
+.comics-list__item {
+  flex-basis: calc(100% / 4 - 1rem - 1rem);
+  flex-grow: 1;
+  margin: 1rem;
+  font-size: 0.8rem;
+}
+
+.comics-heading {
+  margin: 0;
+  padding-left: 2rem;
+  border-bottom: 1px solid $c-black;
+  font-family: 'Special Elite', cursive;
+}
+
+.comics {
+  margin: 0;
+  padding: 0;
+}
