@@ -1,6 +1,13 @@
 // @import 'yoga';
 // @import 'normalize';
 
-// $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-// @import 'font-awesome';
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
+@import 'font-awesome';
 @import 'box-sizing';
+@import 'resets';
+@import 'navbar';
+@import 'left';
+@import 'right';
+
+// font-family: 'Maven Pro', sans-serif;
+// font-family: 'Special Elite', cursive;

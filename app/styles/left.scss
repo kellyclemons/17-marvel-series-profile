@@ -1,0 +1,29 @@
+// LEFT SIDE
+
+.left {
+  font-size: 0.8rem;
+}
+
+.left__big {
+  width: 30rem;
+  margin: 0;
+  padding: 0;
+  border-radius: 5%;
+}
+
+.left-title {
+  padding: 0.5rem 0 0.5rem 0;
+  // background: red;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.date {
+  padding: 0.8rem 0 0.8rem 0;
+}
+
+.creators-heading {
+  border-bottom: 1px solid $c-black;
+  font-family: 'Special Elite', cursive;
+  font-size: 1rem;
+}
