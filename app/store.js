@@ -2,6 +2,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import Revue from 'revue';
 
+import Vue from 'vue';
 import reducer from './reducer';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -14,5 +15,7 @@ const store = createStore(
     applyMiddleware(thunk)
   )
 );
+
+const revue = new Revue(Vue, store);
 
 export default store;

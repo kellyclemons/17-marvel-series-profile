@@ -5,22 +5,23 @@
         <h1 class="navbar__heading">Marvel</h1>
       </div>
     </div>
-
+<div class="container">
         <div class="main">
 
-          <div class="left">
-            <img src="https://i.annihil.us/u/prod/marvel/i/mg/3/b0/4c6951936e21d/background.jpg" alt="" class="left__big">
-            <div class="left-title">Spider-Girl (2010-2011)</div>
-            <div class="date">2010-2011</div>
+          <div class="left" v-if="seriesInfo">
+            <img :src="`${seriesInfo.thumbnail.path}.${seriesInfo.thumbnail.extension}`" alt="" class="left__big">
+            <div class="left-title">{{seriesInfo.title}}</div>
             <div class="creators">
               <div class="creators-heading">Creators</div>
               <ul class="creators-list">
-                <li class="creators-list__item">Tom Brennan</li>
-                <li class="creators-list__item">Mike Del Mundo</li>
+                <li v-for="item in seriesInfo.creators.items">
+                  <p class="creators-list__item">{{item.name}}</p>
+                </li>
+                <!-- <li class="creators-list__item">Mike Del Mundo</li>
                 <li class="creators-list__item">Clayton Henry</li>
                 <li class="creators-list__item">Barry Kitson</li>
                 <li class="creators-list__item">Jelena Kevic Djurdevic</li>
-                <li class="creators-list__item">Paul Tobin</li>
+                <li class="creators-list__item">Paul Tobin</li> -->
               </ul>
             </div>
           </div>
@@ -100,9 +101,19 @@
 </template>
 
 <script>
+import store from '../store';
+import { seriesInfoSearch } from '../actions';
 export default {
   data() {
-    return {};
+    return {
+      seriesInfo: this.$select('seriesInfo'),
+      characterData: this.$select('characterData'),
+      comicData: this.$select('comicData'),
+    };
+  },
+
+  mounted() {
+    store.dispatch(seriesInfoSearch('Hulk'));
   },
 
   methods: {
